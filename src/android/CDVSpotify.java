@@ -149,12 +149,13 @@ public class CDVSpotify extends CordovaPlugin implements
     }
 
     private void play(String uri) {
-        Log.i(TAG, "Play: Is logged in -" + isLoggedIn + "Current Access" + currentAccessToken + "Current player" + currentPlayer);
+        Log.i(TAG, "Play: Client id - " + clientId + ", Is logged in - " + isLoggedIn + ", Current Access - " + currentAccessToken + ", Current player - " + currentPlayer);
         if(clientId == null || isLoggedIn == false || currentAccessToken == null || currentPlayer == null) return;
 
         if(currentPlayer.isLoggedIn()) {
-            Log.e(TAG, "Current Player is initialized but player is not logged in, set access token manually or call login with fetchTokenManually : false");
-            return;
+             Log.e(TAG, "Current Player is initialized but player is not logged in, set access token manually or call login with fetchTokenManually : false");
+             Log.e(TAG, "currentPlayer.isLoggedIn() does not work as intended at the moment (always returns false). Try to proceed without login check.");
+             // return;
         }
 
         Log.i(TAG, "Playing URI: " + uri);

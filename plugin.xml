@@ -63,9 +63,13 @@
     <source-file src="src/android/CDVSpotify.java" target-dir="src/com/pmwisdom/spotify"/>
 
     <framework src="src/android/spotify.gradle" custom="true" type="gradleReference" />
+<!--
+    <resource-file src="libs/android/spotify-auth-beta21-noconnect-2.18c.aar" target="libs/spotify/spotify-auth-latest.aar" />
+    <resource-file src="libs/android/spotify-player-beta21-noconnect-2.18c.aar" target="libs/spotify/spotify-player-latest.aar" />
+-->
+    <resource-file src="libs/android/spotify-auth-1.0.0-beta12.aar" target="libs/spotify/spotify-auth-latest.aar" />
+    <resource-file src="libs/android/spotify-player-1.0.0-beta12.aar" target="libs/spotify/spotify-player-latest.aar" />
 
-    <resource-file src="libs/android/spotify-auth-1.0.0-beta12.aar" target="libs/spotify/spotify-auth-1.0.0-beta12.aar" />
-    <resource-file src="libs/android/spotify-player-1.0.0-beta12.aar" target="libs/spotify/spotify-player-1.0.0-beta12.aar" />
 
   </platform>
 </plugin>

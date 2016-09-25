@@ -1,13 +1,13 @@
 repositories{
   jcenter()
   flatDir{
-      dirs '/libs/spotify'
+      dirs 'libs/spotify'
    }
 }
 
 dependencies {
-   compile(name:'spotify-auth-1.0.0-beta12', ext:'aar')
-   compile(name:'spotify-player-1.0.0-beta12', ext:'aar')
+   compile(name:'spotify-auth-latest', ext:'aar')
+   compile(name:'spotify-player-latest', ext:'aar')
 }
 
 android {
